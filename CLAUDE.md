@@ -11,6 +11,8 @@
   - ZIP読込（xlsx解析）・ZIP書出し（xlsx生成）・Shift_JIS読込をすべて自前のJSで実装
   - ファビコンはPNGをbase64で埋め込み（`icon/` のPNGが元）
 - `icon/` … アイコン（.icoはWindowsショートカット用）
+- `ショートカット作成.bat` … デスクトップに.lnkを作る（PowerShellのWScript.Shellを使用）
+  - Shift_JIS・CRLFで保存すること（日本語Windowsのcmdで文字化けしないため）。`.gitattributes` で binary 扱い
 
 ## 入力ファイルの仕様
 ### 内示CSV（例：`sample/協豊100270_0_20261026.csv`）
