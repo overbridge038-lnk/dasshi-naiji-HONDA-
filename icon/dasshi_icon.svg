@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1565C0"/>
+      <stop offset="1" stop-color="#0D3B73"/>
+    </linearGradient>
+    <linearGradient id="drop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4FC3F7"/>
+      <stop offset="1" stop-color="#0288D1"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="48" fill="url(#bg)"/>
+  <!-- 表（内示データ） -->
+  <rect x="40" y="44" width="132" height="164" rx="12" fill="#FFFFFF"/>
+  <rect x="40" y="44" width="132" height="34" rx="12" fill="#2E7D32"/>
+  <rect x="40" y="66" width="132" height="12" fill="#2E7D32"/>
+  <g stroke="#B0BEC5" stroke-width="5" stroke-linecap="round">
+    <line x1="56" y1="100" x2="156" y2="100"/>
+    <line x1="56" y1="124" x2="156" y2="124"/>
+    <line x1="56" y1="148" x2="156" y2="148"/>
+    <line x1="56" y1="172" x2="120" y2="172"/>
+  </g>
+  <line x1="84" y1="88" x2="84" y2="184" stroke="#B0BEC5" stroke-width="4"/>
+  <!-- しずく（脱脂） -->
+  <path d="M184 92 C184 92 226 140 226 168 C226 192 207 210 184 210 C161 210 142 192 142 168 C142 140 184 92 184 92 Z"
+        fill="url(#drop)" stroke="#FFFFFF" stroke-width="8"/>
+  <!-- 取り出し矢印 -->
+  <path d="M184 136 L184 182 M166 166 L184 184 L202 166" fill="none" stroke="#FFFFFF" stroke-width="11"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
