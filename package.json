@@ -1,0 +1,14 @@
+{
+  "name": "dasshi-naiji",
+  "version": "1.0.0",
+  "private": true,
+  "description": "脱脂内示データ抽出ツール（オフラインHTML）",
+  "scripts": {
+    "e2e": "node tests/e2e.js",
+    "verify": "python tests/verify.py output/test_output.xlsx",
+    "test": "node tests/e2e.js && python tests/verify.py output/test_output.xlsx"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  }
+}
