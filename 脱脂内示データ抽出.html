@@ -55,6 +55,9 @@
   td.sb,th.sb{position:sticky;left:0;z-index:1;text-align:center;font-weight:bold;background:#fff}
   th.sb{z-index:3;background:#DCE6F2}
   td.pn{text-align:left;color:var(--sub)}
+  td.ctr{text-align:center}
+  td.kb{text-align:center;font-weight:bold;color:var(--sub)}
+  tr.bx td{background:#EAF2FB;color:#1F4E9E} tr.bx td.wk{background:#DCE6F1} tr.bx td.tot{background:#D6E6F5}
   td.st{text-align:center;font-weight:bold}
   tr.ok td.st{background:var(--okbg);color:var(--ok)}
   tr.ng td.st,tr.ng td.sb{background:var(--ngbg);color:var(--ng)}
@@ -66,7 +69,7 @@
 <header>
   <img src="data:image/png;base64,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" alt="">
   <h1>脱脂内示データ抽出</h1>
-  <span class="ver">オフライン動作 / v1.0</span>
+  <span class="ver" id="ver">オフライン動作</span>
 </header>
 <main>
   <div class="steps">
@@ -92,7 +95,7 @@
     <div class="tiles">
       <div class="tile"><div class="n" id="tAll">0</div><div class="l">ひな形の背番</div></div>
       <div class="tile ok"><div class="n" id="tOk">0</div><div class="l">一致（反映済み）</div></div>
-      <div class="tile warn"><div class="n" id="tNone">0</div><div class="l">CSVに該当なし／注意</div></div>
+      <div class="tile warn"><div class="n" id="tNone">0</div><div class="l">注意（CSVに該当なし・入り数なし など）</div></div>
       <div class="tile ng"><div class="n" id="tNg">0</div><div class="l">数量異常（要確認）</div></div>
     </div>
     <div class="actions">
@@ -115,6 +118,8 @@ const CONF = {
   keyColumn:   "整理番号",       // CSV側の照合キー
   partColumn:  "社内品番",       // 画面確認用
   totalPrefix: "内示数量(",      // 例: 内示数量(2611)
+  irisuLabels: ["入り数", "入数"], // ひな形の入り数の見出し（あれば箱数を計算）
+  version:     "ver 2026/11/03",  // 画面とExcelに表示する版（直したら日付を更新）
 };
 const WD = ["日","月","火","水","木","金","土"];
 
@@ -177,8 +182,8 @@ async function readTemplate(file){
     const rid = sh.getAttributeNS("http://schemas.openxmlformats.org/officeDocument/2006/relationships", "id") || sh.getAttribute("r:id");
     let target = relMap[rid] || ""; target = target.startsWith("/") ? target.slice(1) : "xl/" + target;
     const sx = await text(target); if(!sx) continue;
-    const cells = {};
-    kids(xml(sx), "c").forEach(c => {
+    const sdoc = xml(sx), cells = {};
+    kids(sdoc, "c").forEach(c => {
       const t = c.getAttribute("t"), v = kids(c, "v")[0]; let val = null;
       if(t === "s" && v) val = ss[+v.textContent];
       else if(t === "inlineStr") val = kids(c, "t").map(x => x.textContent).join("");
@@ -188,11 +193,31 @@ async function readTemplate(file){
     const hdr = Object.keys(cells).find(k => norm(cells[k]) === norm(CONF.headerLabel));
     if(!hdr) continue;
     const { c: col, r: row } = colNum(hdr);
+    // 結合セル（例：呼名 C:E、入り数 F:H）
+    const merges = kids(sdoc, "mergeCell").map(m => {
+      const [a, b] = m.getAttribute("ref").split(":"); const p = colNum(a), q = colNum(b || a);
+      return { c1: p.c, r1: p.r, c2: q.c, r2: q.r };
+    });
+    // 見出し行の項目を「背番」から右へ順に拾う（結合セルは結合の幅ごと）
+    const groups = Object.keys(cells).map(k => ({ k, p: colNum(k) }))
+      .filter(x => x.p.r === row && x.p.c >= col).sort((a, b) => a.p.c - b.p.c)
+      .map(x => {
+        const m = merges.find(m => m.r1 <= row && row <= m.r2 && m.c1 === x.p.c);
+        return { c1: x.p.c, c2: m ? m.c2 : x.p.c, label: cells[x.k] };
+      });
+    const irisuIdx = groups.findIndex((g, i) => i > 0 && CONF.irisuLabels.some(l => norm(l) === norm(g.label)));
     let last = row;
     for(const k in cells){ const p = colNum(k); if(p.c === col && p.r > last) last = p.r; }
     const items = [];
-    for(let r = row + 1; r <= last; r++) items.push({ row: r, seban: cells[colName(col) + r] || "" });
-    return { name: file.name, sheetName: sh.getAttribute("name"), col, row, items };
+    for(let r = row + 1; r <= last; r++){
+      items.push({
+        row: r,
+        seban: cells[colName(col) + r] || "",
+        info: groups.slice(1).map(g => cells[colName(g.c1) + r] || ""),   // 呼名・入り数など（背番以外の見出し）
+        irisuRaw: irisuIdx > 0 ? (cells[colName(groups[irisuIdx].c1) + r] || "") : null,
+      });
+    }
+    return { name: file.name, sheetName: sh.getAttribute("name"), col, row, items, groups, hasIrisu: irisuIdx > 0 };
   }
   throw new Error(`ひな形に「${CONF.headerLabel}」の見出しが見つかりません`);
 }
@@ -250,37 +275,62 @@ function match(csv, tpl){
     if(daySum !== (tot[0] || 0)){ kind = "ng"; status = `日別≠当月（日別計${daySum}）`; }
     else if(hits.length > 1){ kind = "warn"; status = `CSV${hits.length}行を合算`; }
     else if(seen.get(k) > 1){ kind = "warn"; status = "一致（ひな形で重複）"; }
-    return { ...it, kind, status, day, tot, part };
+    // 箱数＝数量÷入り数（小数点は繰り上げ）
+    let boxDay = null, boxTot = null;
+    if(tpl.hasIrisu){
+      const irisu = num(it.irisuRaw);
+      if(irisu !== null && irisu > 0){
+        const ceil = v => v === null ? null : Math.ceil(v / irisu);
+        boxDay = day.map(ceil);
+        // 当月は日ごとの箱数の合計（毎日の出荷で実際に使う箱数）。翌月・翌々月は日別が無いので月の数量÷入り数
+        const m0 = day.some(v => v !== null) ? boxDay.reduce((a, b) => a + (b || 0), 0) : ceil(tot[0]);
+        boxTot = [m0, ceil(tot[1]), ceil(tot[2])];
+      }else{
+        // 入り数が空欄・数字でない → 箱数を出さずに知らせる（ポカヨケ）
+        if(kind === "ok"){ kind = "warn"; status = "入り数なし"; }
+        else status += "／入り数なし";
+      }
+    }
+    return { ...it, kind, status, day, tot, part, boxDay, boxTot };
   });
   return { year, month, days, totals: csv.totals, items: out, csvName: csv.name, tpl };
 }
 
 /* ---------- 画面表示 ---------- */
 function monthLabel(t){ return `${t.mm}月`; }
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
+const fmt = v => v === null || v === undefined ? "" : v.toLocaleString();
 function render(res){
   const cnt = { ok: 0, warn: 0, ng: 0 }, all = res.items.filter(i => i.kind !== "blank");
   all.forEach(i => cnt[i.kind]++);
   $("tAll").textContent = all.length; $("tOk").textContent = cnt.ok; $("tNone").textContent = cnt.warn; $("tNg").textContent = cnt.ng;
-  $("monthNote").textContent = `当月：${res.year}年${res.month}月（日別 ${res.days}日分）／ 翌月：${res.totals[1].mm}月 ／ 翌々月：${res.totals[2].mm}月`;
-  let h = `<tr><th class="sb">${CONF.headerLabel}</th><th>社内品番</th><th>照合結果</th>`;
+  $("monthNote").textContent = `当月：${res.year}年${res.month}月（日別 ${res.days}日分）／ 翌月：${res.totals[1].mm}月 ／ 翌々月：${res.totals[2].mm}月`
+    + (res.tpl.hasIrisu ? "　※箱数＝数量÷入り数（繰り上げ）" : "");
+  const box = res.tpl.hasIrisu, infoG = res.tpl.groups.slice(1);
+  const isWk = d => { const w = new Date(res.year, res.month - 1, d).getDay(); return w === 0 || w === 6; };
+  let h = `<tr><th class="sb">${esc(res.tpl.groups[0].label)}</th>${infoG.map(g => `<th>${esc(g.label)}</th>`).join("")}<th>社内品番</th><th>照合結果</th>${box ? "<th>区分</th>" : ""}`;
   for(let d = 1; d <= res.days; d++){
     const w = new Date(res.year, res.month - 1, d).getDay();
-    h += `<th class="${w===0||w===6?"wk":""}">${res.month}/${d}<br><span class="${w===0?"sun":w===6?"sat":""}">${WD[w]}</span></th>`;
+    h += `<th class="${isWk(d) ? "wk" : ""}">${res.month}/${d}<br><span class="${w===0?"sun":w===6?"sat":""}">${WD[w]}</span></th>`;
   }
   res.totals.forEach((t, i) => h += `<th class="tot">${["当月","翌月","翌々月"][i]}<br>${monthLabel(t)}合計</th>`);
   h += "</tr>";
   // 異常（赤）→注意（黄）→正常の順に並べて表示（アンドン）
   const order = { ng: 0, warn: 1, ok: 2, blank: 3 };
   const rows = res.items.filter(i => i.kind !== "blank").slice().sort((a, b) => order[a.kind] - order[b.kind] || a.row - b.row);
-  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
   rows.forEach(it => {
-    h += `<tr class="${it.kind}"><td class="sb">${esc(it.seban)}</td><td class="pn">${esc(it.part || "")}</td><td class="st">${esc(it.status)}</td>`;
-    for(let d = 1; d <= res.days; d++){
-      const w = new Date(res.year, res.month - 1, d).getDay(), v = it.day ? it.day[d-1] : null;
-      h += `<td class="${w===0||w===6?"wk":""}">${v === null || v === undefined ? "" : v.toLocaleString()}</td>`;
-    }
-    for(let i = 0; i < 3; i++){ const v = it.tot ? it.tot[i] : null; h += `<td class="tot">${v === null || v === undefined ? "" : v.toLocaleString()}</td>`; }
+    const rs = box ? ' rowspan="2"' : "";
+    h += `<tr class="${it.kind}"><td class="sb"${rs}>${esc(it.seban)}</td>${it.info.map(v => `<td class="ctr"${rs}>${esc(v)}</td>`).join("")}`
+      + `<td class="pn"${rs}>${esc(it.part || "")}</td><td class="st"${rs}>${esc(it.status)}</td>${box ? '<td class="kb">数量</td>' : ""}`;
+    for(let d = 1; d <= res.days; d++) h += `<td class="${isWk(d) ? "wk" : ""}">${fmt(it.day ? it.day[d-1] : null)}</td>`;
+    for(let i = 0; i < 3; i++) h += `<td class="tot">${fmt(it.tot ? it.tot[i] : null)}</td>`;
     h += "</tr>";
+    if(box){
+      h += `<tr class="bx"><td class="kb">箱数</td>`;
+      for(let d = 1; d <= res.days; d++) h += `<td class="${isWk(d) ? "wk" : ""}">${fmt(it.boxDay ? it.boxDay[d-1] : null)}</td>`;
+      for(let i = 0; i < 3; i++) h += `<td class="tot">${fmt(it.boxTot ? it.boxTot[i] : null)}</td>`;
+      h += "</tr>";
+    }
   });
   $("tbl").innerHTML = h;
   $("result").style.display = "block";
@@ -318,13 +368,14 @@ function zip(files){
 const xe = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
 
 /* スタイル番号 */
-const S = { title:1, note:2, hdr:3, hdrWk:4, hdrTot:5, sb:6, num:7, numWk:8, numTot:9, sbWarn:10, stOk:11, stNg:12, stWarn:13, sbNg:14, hdrSun:15, hdrSat:16 };
+const S = { title:1, note:2, hdr:3, hdrWk:4, hdrTot:5, sb:6, num:7, numWk:8, numTot:9, sbWarn:10, stOk:11, stNg:12, stWarn:13, sbNg:14, hdrSun:15, hdrSat:16,
+            info:17, kbQty:18, kbBox:19, numBox:20, numBoxWk:21, numTotBox:22 };
 function stylesXml(){
   const F = `<name val="ＭＳ Ｐゴシック"/><family val="3"/><charset val="128"/>`;
   const fill = rgb => `<fill><patternFill patternType="solid"><fgColor rgb="FF${rgb}"/><bgColor indexed="64"/></patternFill></fill>`;
   const bd = `<left style="thin"><color rgb="FF808080"/></left><right style="thin"><color rgb="FF808080"/></right><top style="thin"><color rgb="FF808080"/></top><bottom style="thin"><color rgb="FF808080"/></bottom><diagonal/>`;
   const xf = (font, fl, b, nf, h, wrap) => `<xf numFmtId="${nf}" fontId="${font}" fillId="${fl}" borderId="${b}" xfId="0" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment ${h ? `horizontal="${h}" ` : ""}vertical="center"${wrap ? ' wrapText="1"' : ""}/></xf>`;
-  // fills: 0 none,1 gray125,2 見出し青,3 土日灰,4 合計緑,5 NG赤,6 注意黄,7 OK緑
+  // fills: 0 none,1 gray125,2 見出し青,3 土日灰,4 合計緑,5 NG赤,6 注意黄,7 OK緑,8 箱数水色,9 箱数土日,10 箱数合計
   const xfs = [
     `<xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>`,
     xf(2,0,0,0,"",0),          // 1 title
@@ -343,12 +394,18 @@ function stylesXml(){
     xf(1,5,1,0,"center",0),    // 14 背番（NG）
     xf(4,3,1,0,"center",1),    // 15 見出し日曜
     xf(5,3,1,0,"center",1),    // 16 見出し土曜
+    xf(0,0,1,0,"center",0),    // 17 呼名・入り数
+    xf(0,0,1,0,"center",0),    // 18 区分「数量」
+    xf(6,8,1,0,"center",0),    // 19 区分「箱数」
+    xf(6,8,1,164,"",0),        // 20 箱数
+    xf(6,9,1,164,"",0),        // 21 箱数（土日）
+    xf(7,10,1,164,"",0),       // 22 箱数の合計
   ];
   return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
 <numFmts count="1"><numFmt numFmtId="164" formatCode="#,##0"/></numFmts>
-<fonts count="6"><font><sz val="11"/>${F}</font><font><b/><sz val="11"/>${F}</font><font><b/><sz val="14"/>${F}</font><font><sz val="9"/><color rgb="FF595959"/>${F}</font><font><b/><sz val="11"/><color rgb="FFC00000"/>${F}</font><font><b/><sz val="11"/><color rgb="FF1F4E9E"/>${F}</font></fonts>
-<fills count="8"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill>${fill("D9E1F2")}${fill("EDEDED")}${fill("E2EFDA")}${fill("FFC7CE")}${fill("FFEB9C")}${fill("C6EFCE")}</fills>
+<fonts count="8"><font><sz val="11"/>${F}</font><font><b/><sz val="11"/>${F}</font><font><b/><sz val="14"/>${F}</font><font><sz val="9"/><color rgb="FF595959"/>${F}</font><font><b/><sz val="11"/><color rgb="FFC00000"/>${F}</font><font><b/><sz val="11"/><color rgb="FF1F4E9E"/>${F}</font><font><sz val="11"/><color rgb="FF1F4E9E"/>${F}</font><font><b/><sz val="11"/><color rgb="FF1F4E9E"/>${F}</font></fonts>
+<fills count="11"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill>${fill("D9E1F2")}${fill("EDEDED")}${fill("E2EFDA")}${fill("FFC7CE")}${fill("FFEB9C")}${fill("C6EFCE")}${fill("DDEBF7")}${fill("CFDCEC")}${fill("BDD7EE")}</fills>
 <borders count="2"><border><left/><right/><top/><bottom/><diagonal/></border><border>${bd}</border></borders>
 <cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>
 <cellXfs count="${xfs.length}">${xfs.join("")}</cellXfs>
@@ -356,29 +413,53 @@ function stylesXml(){
 </styleSheet>`;
 }
 function buildXlsx(res){
-  const tpl = res.tpl, c0 = tpl.col, hr = tpl.row;           // 背番の列・見出し行はひな形と同じ位置
-  const dayC = d => c0 + d, totC = i => c0 + res.days + 1 + i, stC = c0 + res.days + 4;
-  const rows = new Map(); const put = (r, c, v, s, isNum) => { if(!rows.has(r)) rows.set(r, []); rows.get(r).push({ c, v, s, isNum }); };
+  const tpl = res.tpl, hr = tpl.row, box = tpl.hasIrisu, G = tpl.groups;
+  const c0 = G[0].c1, lastInfo = G[G.length - 1].c2;   // 背番〜入り数など、ひな形の見出しと同じ列に置く
+  const kubunC = lastInfo + 1;                          // 区分（数量／箱数）の列
+  const d0 = box ? kubunC : lastInfo;                   // 1日目の1つ手前の列
+  const dayC = d => d0 + d, totC = i => d0 + res.days + 1 + i, stC = d0 + res.days + 4;
+  const rows = new Map(), merges = [];
+  const put = (r, c, v, s, isNum) => { if(!rows.has(r)) rows.set(r, []); rows.get(r).push({ c, v, s, isNum }); };
+  // 結合セル：範囲内のすべてのセルに罫線用のスタイルを付け、左上だけに値を入れる
+  const putMerged = (r1, r2, c1, c2, v, s, isNum) => {
+    for(let r = r1; r <= r2; r++) for(let c = c1; c <= c2; c++) put(r, c, (r === r1 && c === c1) ? v : null, s, isNum);
+    if(r1 !== r2 || c1 !== c2) merges.push(`${colName(c1)}${r1}:${colName(c2)}${r2}`);
+  };
+  const isWk = d => { const w = new Date(res.year, res.month - 1, d).getDay(); return w === 0 || w === 6; };
   const now = new Date(), ts = `${now.getFullYear()}/${now.getMonth()+1}/${now.getDate()} ${String(now.getHours()).padStart(2,"0")}:${String(now.getMinutes()).padStart(2,"0")}`;
   const titleRow = hr > 1 ? hr - 1 : null;
-  if(titleRow) put(titleRow, c0, `脱脂 内示データ　当月 ${res.year}年${res.month}月　（CSV：${res.csvName}　作成：${ts}）`, S.title);
-  put(hr, c0, CONF.headerLabel, S.hdr);
+  if(titleRow) put(titleRow, c0, `脱脂 内示データ　当月 ${res.year}年${res.month}月　（CSV：${res.csvName}　作成：${ts}　ツール ${CONF.version}）`
+    + (box ? "　※箱数＝数量÷入り数（繰り上げ）。当月の箱数は日ごとの箱数の合計" : ""), S.title);
+  // 見出し
+  G.forEach(g => putMerged(hr, hr, g.c1, g.c2, g.label, S.hdr));
+  if(box) put(hr, kubunC, "区分", S.hdr);
   for(let d = 1; d <= res.days; d++){
     const w = new Date(res.year, res.month - 1, d).getDay();
     put(hr, dayC(d), `${res.month}/${d}\n${WD[w]}`, w === 0 ? S.hdrSun : w === 6 ? S.hdrSat : S.hdr);
   }
   res.totals.forEach((t, i) => put(hr, totC(i), `${["当月","翌月","翌々月"][i]}\n${t.mm}月合計`, S.hdrTot));
   put(hr, stC, "照合結果", S.hdr);
+  // 明細：背番ごとに 数量の行（＋入り数があれば箱数の行）
+  let r = hr + 1;
   res.items.forEach(it => {
-    const r = it.row;
     if(it.kind === "blank") return;
-    put(r, c0, it.seban, it.kind === "ng" ? S.sbNg : it.kind === "warn" ? S.sbWarn : S.sb);
+    const r2 = box ? r + 1 : r;
+    putMerged(r, r2, G[0].c1, G[0].c2, it.seban, it.kind === "ng" ? S.sbNg : it.kind === "warn" ? S.sbWarn : S.sb);
+    G.slice(1).forEach((g, i) => {
+      const v = it.info[i] || "", isN = /^-?\d+(\.\d+)?$/.test(v);
+      putMerged(r, r2, g.c1, g.c2, isN ? Number(v) : v, S.info, isN);
+    });
+    if(box){ put(r, kubunC, "数量", S.kbQty); put(r2, kubunC, "箱数", S.kbBox); }
     for(let d = 1; d <= res.days; d++){
-      const w = new Date(res.year, res.month - 1, d).getDay(), v = it.day ? it.day[d-1] : null;
-      put(r, dayC(d), v, (w === 0 || w === 6) ? S.numWk : S.num, true);
+      put(r, dayC(d), it.day ? it.day[d-1] : null, isWk(d) ? S.numWk : S.num, true);
+      if(box) put(r2, dayC(d), it.boxDay ? it.boxDay[d-1] : null, isWk(d) ? S.numBoxWk : S.numBox, true);
     }
-    for(let i = 0; i < 3; i++) put(r, totC(i), it.tot ? it.tot[i] : null, S.numTot, true);
-    put(r, stC, it.status, it.kind === "ok" ? S.stOk : it.kind === "ng" ? S.stNg : S.stWarn);
+    for(let i = 0; i < 3; i++){
+      put(r, totC(i), it.tot ? it.tot[i] : null, S.numTot, true);
+      if(box) put(r2, totC(i), it.boxTot ? it.boxTot[i] : null, S.numTotBox, true);
+    }
+    putMerged(r, r2, stC, stC, it.status, it.kind === "ok" ? S.stOk : it.kind === "ng" ? S.stNg : S.stWarn);
+    r = r2 + 1;
   });
   let sd = "";
   [...rows.keys()].sort((a, b) => a - b).forEach(r => {
@@ -391,22 +472,28 @@ function buildXlsx(res){
     sd += `<row r="${r}"${r === hr ? ' ht="32" customHeight="1"' : r === titleRow ? ' ht="22" customHeight="1"' : ""}>${cells}</row>`;
   });
   let cols = c0 > 1 ? `<col min="1" max="${c0-1}" width="3" customWidth="1"/>` : "";
-  cols += `<col min="${c0}" max="${c0}" width="12" customWidth="1"/>`;
+  G.forEach((g, i) => {
+    const w = i === 0 ? 10 : g.c2 > g.c1 ? 3.5 : 9;      // 結合している見出しは1列を細く
+    cols += `<col min="${g.c1}" max="${g.c2}" width="${w}" customWidth="1"/>`;
+  });
+  if(box) cols += `<col min="${kubunC}" max="${kubunC}" width="6" customWidth="1"/>`;
   cols += `<col min="${dayC(1)}" max="${dayC(res.days)}" width="6.5" customWidth="1"/>`;
   cols += `<col min="${totC(0)}" max="${totC(2)}" width="10" customWidth="1"/>`;
   cols += `<col min="${stC}" max="${stC}" width="22" customWidth="1"/>`;
   const sheet = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
-<sheetViews><sheetView workbookViewId="0" tabSelected="1"><pane xSplit="${c0}" ySplit="${hr}" topLeftCell="${colName(c0+1)}${hr+1}" activePane="bottomRight" state="frozen"/></sheetView></sheetViews>
+<sheetViews><sheetView workbookViewId="0" tabSelected="1"><pane xSplit="${d0}" ySplit="${hr}" topLeftCell="${colName(d0+1)}${hr+1}" activePane="bottomRight" state="frozen"/></sheetView></sheetViews>
 <sheetFormatPr defaultRowHeight="13.5"/><cols>${cols}</cols><sheetData>${sd}</sheetData>
+${merges.length ? `<mergeCells count="${merges.length}">${merges.map(m => `<mergeCell ref="${m}"/>`).join("")}</mergeCells>` : ""}
 <pageMargins left="0.3" right="0.3" top="0.5" bottom="0.5" header="0.3" footer="0.3"/>
 <pageSetup paperSize="8" orientation="landscape" fitToHeight="0"/>
 </worksheet>`;
   const sheetName = xe((tpl.sheetName || "脱脂背番").slice(0, 31));
+  const sq = sheetName.replace(/'/g, "''");
   return zip([
     ["[Content_Types].xml", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>`],
     ["_rels/.rels", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>`],
-    ["xl/workbook.xml", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><bookViews><workbookView/></bookViews><sheets><sheet name="${sheetName}" sheetId="1" r:id="rId1"/></sheets><definedNames><definedName name="_xlnm.Print_Titles" localSheetId="0">'${sheetName.replace(/'/g,"''")}'!$${colName(c0)}:$${colName(c0)},'${sheetName.replace(/'/g,"''")}'!$${hr}:$${hr}</definedName></definedNames></workbook>`],
+    ["xl/workbook.xml", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><bookViews><workbookView/></bookViews><sheets><sheet name="${sheetName}" sheetId="1" r:id="rId1"/></sheets><definedNames><definedName name="_xlnm.Print_Titles" localSheetId="0">'${sq}'!$${colName(c0)}:$${colName(d0)},'${sq}'!$${hr}:$${hr}</definedName></definedNames></workbook>`],
     ["xl/_rels/workbook.xml.rels", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`],
     ["xl/styles.xml", stylesXml()],
     ["xl/worksheets/sheet1.xml", sheet],
@@ -429,7 +516,7 @@ async function handle(files){
     const ext = f.name.toLowerCase().split(".").pop();
     try{
       if(ext === "csv"){ csvData = await readCsv(f); setSlot("slotCsv", f, `${csvData.rows.length}行`); }
-      else if(ext === "xlsx" || ext === "xlsm"){ tplData = await readTemplate(f); setSlot("slotTpl", f, `背番 ${tplData.items.filter(i => i.seban).length}件（シート：${tplData.sheetName}）`); }
+      else if(ext === "xlsx" || ext === "xlsm"){ tplData = await readTemplate(f); setSlot("slotTpl", f, `背番 ${tplData.items.filter(i => i.seban).length}件${tplData.hasIrisu ? "・入り数あり（箱数も計算）" : ""}（シート：${tplData.sheetName}）`); }
       else throw new Error(`「${f.name}」は対象外です（.csv と .xlsx のみ）`);
     }catch(e){ alarm(`${f.name}：${e.message}`); }
   }
@@ -450,6 +537,7 @@ $("dl").addEventListener("click", () => {
   document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
 });
 $("reset").addEventListener("click", () => location.reload());
+$("ver").textContent = `オフライン動作 / ${CONF.version}`;
 </script>
 </body>
 </html>
