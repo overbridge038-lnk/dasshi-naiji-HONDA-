@@ -119,7 +119,7 @@ const CONF = {
   partColumn:  "社内品番",       // 画面確認用
   totalPrefix: "内示数量(",      // 例: 内示数量(2611)
   irisuLabels: ["入り数", "入数"], // ひな形の入り数の見出し（あれば箱数を計算）
-  version:     "ver 2026/11/03",  // 画面とExcelに表示する版（直したら日付を更新）
+  version:     "ver 2026/11/17",  // 画面とExcelに表示する版（直したら日付を更新）
 };
 const WD = ["日","月","火","水","木","金","土"];
 
@@ -539,5 +539,6 @@ $("dl").addEventListener("click", () => {
 $("reset").addEventListener("click", () => location.reload());
 $("ver").textContent = `オフライン動作 / ${CONF.version}`;
 </script>
+<script>/* オフライン保存（Wi-Fiがあれば最新版、なければ最後に開いた版で動く） */if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost'))navigator.serviceWorker.register('sw.js').catch(function(){});</script>
 </body>
 </html>
